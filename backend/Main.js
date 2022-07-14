@@ -19,5 +19,5 @@ app.post('/ordered', function(req, res) {
 
 app.listen(
     PORT,
-    ()=>console.log('server listening on http://localhost:3000')
+    ()=>console.log('http://localhost:3000')
 )
