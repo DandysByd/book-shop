@@ -9,11 +9,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
 app.get('/ordered', function(req, res) {
-   
+   res.status(200)
 })
 
 app.post('/ordered', function(req, res) {
-    
+    res.status(200)
+    res.send('')
 })
 
 app.listen(
