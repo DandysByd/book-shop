@@ -13,6 +13,7 @@ function App() {
 
   const [book, setBook] = useState([])
 
+  // získání a převedení dat z XML
   useEffect(() => {
     axios.get(books, {
       "Content-Type": "application/xml; charset=utf-8"

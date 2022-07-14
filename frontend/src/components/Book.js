@@ -5,23 +5,24 @@ import React, { useState } from 'react'
 
 const Book = (props) => {
 
-  
+    // konverze z bináru v xml na text
     var unavailableConverted;
     props.x.unavailable == '1' ? unavailableConverted = 'yes' : unavailableConverted = 'no';
 
     const [availability, setAvailability] = useState(unavailableConverted)
 
-
+    // kontrola, zda je kniha dostupná
     const checkAvailability = (x) => {
         x[0] === '1' || availability === 'yes' ? alert('The book has already been ordered!') : orderBook()
     }
 
+    // funkce na objednávku knihy
     const orderBook = () => {
         setAvailability('yes')
         alert('The book you have chosen has been ordered!')
 
 
-
+        // vytažení identifikátoru jednotlivé knížky
         var data = props.x.$.id;
 
         // post request pro odeslání identifikátoru knihy na backend
