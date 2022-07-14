@@ -8,8 +8,12 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 })
+app.get('/ordered', function(req, res) {
+   
+})
+
 app.post('/ordered', function(req, res) {
-    res.write('aassas')
+    
 })
 
 app.listen(

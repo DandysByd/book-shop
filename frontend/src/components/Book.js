@@ -26,7 +26,7 @@ const Book = (props) => {
 
         // post request pro odeslání identifikátoru knihy na backend
         axios
-            .post('http://localhost:3000/ordered', data)
+            .post('/ordered', data)
             .then(res => {
                 console.log(res)
             })
